@@ -206,7 +206,7 @@ class KeywordQueryEventListener(EventListener):
                     ExtensionResultItem(
                         icon=ITEM_ICON,
                         name=e["name"],
-                        description=self.bitwarden.get_folder(e["folderId"]),
+                        description=f"{e['login']['username']} - {self.bitwarden.get_folder(e['folderID'])}",
                         on_enter=action,
                     )
                 )
